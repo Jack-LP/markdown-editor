@@ -11,6 +11,9 @@ module.exports = {
           400: '#15161a',
         },
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],

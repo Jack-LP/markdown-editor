@@ -10,6 +10,8 @@ module.exports = {
           300: '#1e1f23',
           400: '#15161a',
         },
+        slate: '#c3c4c9',
+        myOrange: '#e46643',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],

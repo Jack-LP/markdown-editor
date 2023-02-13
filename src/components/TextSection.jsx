@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import EditSection from './EditSection';
 import PreviewSection from './PreviewSection';
 
-const TextSection = () => {
-  const [input, setInput] = useState();
-
+const TextSection = ({ input, setInput }) => {
   return (
     <div className='w-full flex'>
       <EditSection setInput={setInput} input={input} />

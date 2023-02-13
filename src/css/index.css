@@ -2,14 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-blockquote {
+.unreset blockquote {
   background-color: #2c2d31;
-  padding: 5px;
-  padding-inline: 10px !important;
+  padding: 25px !important;
   margin: 0 !important;
   border-radius: 5px;
   font-weight: 600;
   border-left: 4px solid #e86e4d;
+}
+
+.unreset ul li {
+  list-style: none !important;
+}
+
+.unreset ul li::before {
+  content: '\2022';
+  color: #e86e4d;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.unreset a {
+  text-decoration: underline;
 }
 
 html.unreset {
@@ -21,6 +36,7 @@ html.unreset {
 }
 .unreset p {
   margin: 0;
+  color: #c3c4c9;
 }
 .unreset blockquote,
 .unreset figure {
@@ -51,24 +67,25 @@ html.unreset {
   margin: 0.83em 0;
 }
 .unreset h3 {
-  font-size: 1.17em;
+  font-size: 1.35em;
   font-weight: bold;
   margin: 1em 0;
 }
 .unreset h4 {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
   margin: 1.33em 0;
 }
 .unreset h5 {
-  font-size: 0.83em;
+  font-size: 1em;
   font-weight: bold;
   margin: 1.67em 0;
 }
 .unreset h6 {
-  font-size: 0.67em;
+  font-size: 0.9em;
   font-weight: bold;
   margin: 2.33em 0;
+  color: #e86e4d;
 }
 .unreset article h1,
 .unreset aside h1,
@@ -1482,11 +1499,13 @@ html.unreset {
   list-style-type: disc;
   margin: 1em 0;
   padding: 0 0 0 40px;
+  color: #c3c4c9;
 }
 .unreset ol {
   list-style-type: decimal;
   margin: 1em 0;
   padding: 0 0 0 40px;
+  color: #c3c4c9;
 }
 .unreset ul ul,
 .unreset ol ul {
@@ -1564,13 +1583,22 @@ html.unreset {
 .unreset code,
 .unreset kbd,
 .unreset samp {
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
   font-weight: inherit;
+  background: #2c2d31;
+  padding: 3px;
+  border-radius: 5px;
+  color: white;
 }
 .unreset pre {
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
   margin: 1em 0;
   white-space: pre;
+  background: #2c2d31;
+  padding: 25px;
+  border-radius: 5px;
+  color: white;
 }
 .unreset mark {
   background-color: yellow;

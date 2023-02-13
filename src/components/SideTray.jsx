@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, PlusCircle, Upload } from 'react-bootstrap-icons';
+import { PlusCircle, Upload } from 'react-bootstrap-icons';
 
 const SideTray = ({ trayOpen, setTrayOpen, input, setInput, setDocTitle }) => {
   const [showModal, setShowModal] = useState(false);

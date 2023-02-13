@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from 'react';
-import DocumentContext from '../../context/DocumentContext';
+import React from 'react';
 
 const EditSection = ({ input, setInput }) => {
   return (

@@ -2,9 +2,7 @@ import React, { useContext, useState } from 'react';
 import DocumentContext from '../../context/DocumentContext';
 import { List, Save, FileEarmark } from 'react-bootstrap-icons';
 
-const Navbar = ({ input, trayOpen, setTrayOpen }) => {
-  const [docTitle, setDocTitle] = useState('untitled-document');
-
+const Navbar = ({ input, setTrayOpen, docTitle, setDocTitle }) => {
   const saveDoc = () => {
     const link = document.createElement('a');
     const file = new Blob([input], { type: 'text/plain' });

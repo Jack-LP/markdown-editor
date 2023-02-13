@@ -12,6 +12,7 @@ const EditSection = ({ input, setInput }) => {
         id='inputText'
         value={input}
         autoFocus
+        spellCheck='false'
         wrap={'hard'}
         className='w-full h-[88vh] bg-charcoal-400 outline-none border-r-[1px] border-white/20 resize-none font-robotoMono px-10 py-4'
       ></textarea>

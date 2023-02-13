@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background: #e46643;
+}
+
 .unreset blockquote {
   background-color: #2c2d31;
   padding: 25px !important;
   margin: 0 !important;
   border-radius: 5px;
   font-weight: 600;
-  border-left: 4px solid #e86e4d;
+  border-left: 4px solid #e46643;
 }
 
 .unreset ul li {
@@ -17,7 +21,7 @@
 
 .unreset ul li::before {
   content: '\2022';
-  color: #e86e4d;
+  color: #e46643;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
@@ -85,7 +89,7 @@ html.unreset {
   font-size: 0.9em;
   font-weight: bold;
   margin: 2.33em 0;
-  color: #e86e4d;
+  color: #e46643;
 }
 .unreset article h1,
 .unreset aside h1,

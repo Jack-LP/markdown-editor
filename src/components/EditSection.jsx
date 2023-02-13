@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import DocumentContext from '../../context/DocumentContext';
 
 const EditSection = ({ input, setInput }) => {
   return (
@@ -8,6 +9,7 @@ const EditSection = ({ input, setInput }) => {
       </h2>
       <textarea
         onChange={(e) => setInput(e.target.value)}
+        id='inputText'
         value={input}
         autoFocus
         wrap={'hard'}

@@ -4,7 +4,7 @@ import TextSection from './components/TextSection';
 import SideTray from './components/SideTray';
 
 const App = () => {
-  const [input, setInput] = useState();
+  const [input, setInput] = useState('');
   const [docTitle, setDocTitle] = useState('untitled-document');
   const [trayOpen, setTrayOpen] = useState();
 
@@ -21,6 +21,7 @@ const App = () => {
       <SideTray
         trayOpen={trayOpen}
         setTrayOpen={setTrayOpen}
+        input={input}
         setInput={setInput}
         setDocTitle={setDocTitle}
       />

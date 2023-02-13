@@ -12,7 +12,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        robotoMono: ['Roboto Mono', 'sans-serif'],
+        robotoSlab: ['Roboto Slab', 'sans-serif'],
+        commissioner: ['Commissioner', 'sans-serif'],
       },
     },
   },

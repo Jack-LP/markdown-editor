@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { X } from 'react-bootstrap-icons';
+import DocumentContext from '../../context/DocumentContext';
 
-const SideTray = ({ trayOpen, setTrayOpen, docList, setDocList }) => {
-  const createDoc = () => {
-    setDocList([...prev, 'hello']);
-  };
+const SideTray = ({ trayOpen, setTrayOpen }) => {
+  const { docList, setDocList } = useContext(DocumentContext);
 
   return (
     <div

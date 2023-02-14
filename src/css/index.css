@@ -115,6 +115,12 @@
   font-weight: inherit;
 }
 
+.unreset code {
+  background-color: #2c2d31;
+  padding: 2px;
+  border-radius: 5px;
+}
+
 .unreset pre {
   font-family: 'Roboto Mono', monospace;
   font-size: 1em;

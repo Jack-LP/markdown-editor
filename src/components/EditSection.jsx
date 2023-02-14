@@ -2,8 +2,8 @@ import React from 'react';
 
 const EditSection = ({ input, setInput }) => {
   return (
-    <div className='flex flex-col w-[50vw]'>
-      <h2 className='uppercase tracking-wider bg-charcoal-300 p-3 text-slate border-r-[1px] border-white/20'>
+    <div className='flex flex-col w-screen md:w-[50vw]'>
+      <h2 className='uppercase text-sm tracking-wider bg-charcoal-300 p-3 text-slate border-r-[1px] border-white/20'>
         Markdown
       </h2>
       <textarea

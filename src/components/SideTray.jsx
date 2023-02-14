@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PlusCircle, Upload } from 'react-bootstrap-icons';
+import { PlusCircle, Upload, ExclamationCircle } from 'react-bootstrap-icons';
 
 const SideTray = ({ trayOpen, setTrayOpen, input, setInput, setDocTitle }) => {
   const [showModal, setShowModal] = useState(false);
@@ -40,14 +40,17 @@ const SideTray = ({ trayOpen, setTrayOpen, input, setInput, setDocTitle }) => {
       <div
         className={`${
           showModal ? 'flex' : 'hidden'
-        } absolute inset-0 backdrop-blur-md`}
+        } absolute inset-0 backdrop-blur-md z-20`}
       ></div>
       <div
         className={`${
           showModal ? 'flex' : 'hidden'
-        } absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-col bg-charcoal-100 p-6 rounded-lg gap-6 w-[400px] shadow-xl`}
+        } absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-col bg-charcoal-100 p-6 rounded-lg gap-6 w-[400px] shadow-xl z-30 max-w-[90%]`}
       >
-        <h2 className='font-semibold text-myOrange'>Warning</h2>
+        <h2 className='font-semibold text-myOrange flex items-center gap-2'>
+          {' '}
+          <ExclamationCircle size={18} /> Warning
+        </h2>
         <p>
           You have unsaved changes, creating a new file will reset the current
           document.

@@ -4,6 +4,7 @@ import {
   ChevronDown,
   ChevronUp,
   FileEarmark,
+  Save,
 } from 'react-bootstrap-icons';
 
 const Navbar = ({ input, setTrayOpen, docTitle, setDocTitle }) => {
@@ -26,9 +27,9 @@ const Navbar = ({ input, setTrayOpen, docTitle, setDocTitle }) => {
     <>
       <div
         onClick={() => setMenuOpen((prev) => !prev)}
-        className={`${menuOpen ? 'flex' : 'hidden'} absolute inset-0`}
+        className={`${menuOpen ? 'flex' : 'hidden'} absolute inset-0 z-20`}
       ></div>
-      <nav className='flex items-center justify-between gap-5 bg-charcoal-200 pr-5'>
+      <nav className='flex items-center justify-between gap-5 bg-charcoal-200 pr-2 md:pr-5'>
         <div className='flex items-center gap-5'>
           <button
             onClick={() => setTrayOpen((prev) => !prev)}
@@ -36,7 +37,7 @@ const Navbar = ({ input, setTrayOpen, docTitle, setDocTitle }) => {
           >
             <List size={32} />
           </button>
-          <h1 className='uppercase font-semibold tracking-[4px] border-r-[1px] pr-5'>
+          <h1 className='uppercase font-semibold tracking-[4px] border-r-[1px] pr-5 hidden md:block'>
             Markdown
           </h1>
           <div className='flex gap-2 items-center'>
@@ -53,18 +54,28 @@ const Navbar = ({ input, setTrayOpen, docTitle, setDocTitle }) => {
           </div>
         </div>
         <div className='relative'>
-          <button
-            onClick={() => setMenuOpen((prev) => !prev)}
-            className='bg-myOrange py-2 px-5 rounded-md flex gap-2 items-center'
-          >
-            {menuOpen ? <ChevronUp /> : <ChevronDown />}
-            Save As...
-          </button>
+          <div className='md:hidden'>
+            <button
+              onClick={() => setMenuOpen((prev) => !prev)}
+              className='bg-myOrange p-2 rounded-md flex gap-2 items-center'
+            >
+              <Save size={23} />
+            </button>
+          </div>
+          <div className='hidden md:block'>
+            <button
+              onClick={() => setMenuOpen((prev) => !prev)}
+              className='bg-myOrange py-2 px-5 rounded-md flex gap-2 items-center'
+            >
+              {menuOpen ? <ChevronUp /> : <ChevronDown />}
+              Save As...
+            </button>
+          </div>
           <div
             onClick={(e) => e.stopPropagation}
             className={`${
               menuOpen ? 'flex' : 'hidden'
-            } flex-col gap-2 absolute top-12 bg-charcoal-100 w-full p-2 rounded-md`}
+            } flex-col gap-2 absolute top-12 right-0 bg-charcoal-100 w-32 md:w-full p-2 rounded-md z-30`}
           >
             <button
               onClick={() => saveDoc('txt')}
@@ -78,7 +89,7 @@ const Navbar = ({ input, setTrayOpen, docTitle, setDocTitle }) => {
             >
               .md
             </button>
-            <div className='absolute w-4 h-4 bg-charcoal-100 rotate-45 top-[3px] left-1/2 transform -translate-x-1/2 -translate-y-1/2'></div>
+            <div className='absolute w-4 h-4 bg-charcoal-100 rotate-45 top-[3px] right-1 md:right-1/2 md:left-1/2 transform -translate-x-1/2 -translate-y-1/2'></div>
           </div>
         </div>
       </nav>

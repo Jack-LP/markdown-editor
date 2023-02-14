@@ -3,8 +3,8 @@ import ReactMarkdown from 'react-markdown';
 
 const PreviewSection = ({ input }) => {
   return (
-    <div className='flex flex-col w-[50vw]'>
-      <h2 className='uppercase tracking-wider bg-charcoal-300 p-3 text-slate'>
+    <div className='flex flex-col w-screen md:w-[50vw]'>
+      <h2 className='uppercase text-sm tracking-wider bg-charcoal-300 p-3 text-slate'>
         Preview
       </h2>
       <ReactMarkdown

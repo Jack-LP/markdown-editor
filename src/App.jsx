@@ -10,7 +10,7 @@ const App = () => {
   const [trayOpen, setTrayOpen] = useState();
 
   useEffect(() => {
-    fetch('../data/welcome.txt')
+    fetch('../welcome.txt')
       .then((r) => r.text())
       .then((welcome) => {
         if (input === '') {
